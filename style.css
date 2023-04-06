@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Poppins:wght@200;300;400;500;600;700&family=Roboto+Mono:wght@100;200;300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.reStyle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+ul.menu li {
+  list-style: none;
+  float: left;
+}
+ul.menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 0 20px;
+  transition: 0.3s ease-in-out;
+}
+ul.menu li a:hover,
+.icon i:hover {
+  color: brown;
+}
+.icon {
+  display: flex;
+}
+.menu-mb {
+  display: none;
+}
+
+ul.chacha1,
+ul.chacha {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+ul.concon {
+  width: 600px;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #a9a9a9;
+  border-radius: 10px;
+  right: -40px;
+  top: 60px;
+  transform: translateX(150%);
+  transition: 0.3s ease-in-out;
+  padding: 15px;
+}
+
+ul.concon::before {
+  content: "";
+  position: absolute;
+  border: 1px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  border-width: 30px 40px;
+  top: -50px;
+  right: 23px;
+}
+
+ul.chacha:hover ul.concon {
+  transform: translateX(0);
+}
+
+ul.concon1 {
+  width: 400px;
+  height: 100vh;
+  top: -20px;
+  right: -50px;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #a9a9a9;
+  padding: 15px;
+  transform: translateX(150%);
+  transition: 0.3s ease-in-out;
+}
+ul.chacha1:hover ul.concon1 {
+  transform: translateX(0);
+}
+
+/* login */
+.account-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #a9a9a9;
+  padding-bottom: 15px;
+}
+.lg_res {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.lg_res p {
+  transition: 0.2s ease-in-out;
+}
+.lg_res p:hover {
+  color: brown;
+}
+.active {
+  color: brown;
+}
+.login {
+  text-align: center;
+}
+.login input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #8b8b8b;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.login a {
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+.login a:hover {
+  color: brown;
+}
+.login button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  background: brown;
+  border: 1px solid brown;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.login button:hover {
+  background: none;
+  color: brown;
+}
+
+/* register */
+.register {
+  text-align: center;
+}
+.register input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #8b8b8b;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.register a {
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+.register a:hover {
+  color: brown;
+}
+.register button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  background: brown;
+  border: 1px solid brown;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.register button:hover {
+  background: none;
+  color: brown;
+}
+
+.cl {
+  color: #898989;
+}
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social i {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social i:hover {
+  background: brown;
+  color: #fff;
+}
+
+.register {
+  display: none;
+}
+
+.menu-mb,
+.icon i {
+  padding: 10px;
+  font-size: 18px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.seach {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+
+.seach input {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 0;
+  transition: 0.3s ease;
+}
+.seach i {
+  padding: 10px;
+}
+.seach:hover input {
+  border: 1px solid #bcbcbc;
+  width: 100%;
+  padding: 3px 10px;
+}
+/* banner */
+.banner {
+  margin-top: 80px;
+  width: 100%;
+  height: 700px;
+  background: url(img/banner.png) no-repeat center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_banner {
+  text-align: center;
+  width: 1200px;
+  max-width: 95%;
+  font-size: 25px;
+  line-height: 50px;
+}
+.content_banner h1 {
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.content_banner p {
+  color: rgb(174, 174, 174);
+}
+/* product */
+.product1 {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 35% 65%;
+  height: 750px;
+  gap: 20px;
+}
+.item1 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url(img/hinh1.webp) no-repeat center/cover;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text_item {
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  backdrop-filter: blur(30px);
+}
+.item2 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 50%;
+  gap: 20px;
+}
+.item3 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url(img/hinh2.webp) no-repeat center/cover;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.item4 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url(img/hinh1.webp) no-repeat center/cover;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.item5 {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url(img/hinh2.webp) no-repeat center/cover;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.item0 {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.item0:hover {
+  transform: scale(102%);
+  box-shadow: 0 0 15px rgba(5, 5, 5, 0.5);
+}
+.content {
+  margin-top: 100px;
+  text-align: center;
+}
+.show_pro {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  justify-content: space-between;
+}
+
+.product_title h3 {
+  font-family: Edu NSW ACT Foundation;
+  color: brown;
+}
+.product_title p {
+  color: #8b8b8b;
+}
+.product2 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.product2:hover .pay {
+  transform: translateX(0);
+}
+.product2:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  transform: scale(101%);
+}
+
+.product2 .hinh {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.product2 .hinh img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease-in;
+}
+.product2 .hinh img:hover {
+  transform: scale(110%);
+}
+
+.pro_item1 {
+  line-height: 40px;
+}
+.pro-name {
+  line-height: 20px;
+}
+.name11 {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: 700;
+}
+
+.name11:hover {
+  color: brown;
+}
+.pro-icon {
+  margin-top: 15px;
+}
+.pro-icon i {
+  color: brown;
+}
+.proshow_item {
+  position: relative;
+}
+.pay {
+  position: absolute;
+  top: -34px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #b2b2b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-150%);
+  transition: 0.3s ease-in-out;
+}
+.pay i {
+  padding: 12px 20px;
+  border-left: 1px solid #b2b2b2;
+  color: #b2b2b2;
+  transition: 0.2s ease-out;
+}
+.pay i:hover {
+  color: brown;
+}
+
+#aaaaa {
+  border-left: 0px;
+}
+
+/* gioi thieu */
+.gioithieu {
+  margin-top: 100px;
+}
+.gioithieu1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.gitem {
+  height: 600px;
+  background-color: #fff4d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  text-align: center;
+}
+.gitem1 {
+  height: 600px;
+  background: url(img/gt1.jpg) no-repeat center/cover;
+}
+
+.btn_buy {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn_buy button {
+  padding: 5px 20px;
+  background: brown;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  border: 2px solid brown;
+  transition: 0.3s ease-out;
+}
+
+.btn_buy button:hover {
+  background: none;
+  color: brown;
+}
+
+
+
+@media screen and (max-width: 820px) {
+  .show_pro {
+    grid-template-columns: 50% 50%;
+    gap: 40px;
+  }
+  .menu-mb {
+    display: block;
+    position: relative;
+    margin-left: 70px;
+  }
+  .menu-mb:hover ~ .menua ul.menu {
+    display: block;
+    transform: translateX(0);
+  }
+  ul.menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    padding-top: 50px;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-150%);
+    border-top: 1px solid #333;
+  }
+  ul.menu li {
+    float: none;
+    line-height: 50px;
+  }
+  .seach input {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    font-size: 18px;
+  }
+  .item1 {
+    display: none;
+  }
+  .product1 {
+    grid-template-columns: 1fr;
+  }
+  ul.concon1 {
+    width: 400px;
+    top: 65px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .reStyle {
+    padding: 0 10px;
+  }
+  .show_pro {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .product1 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .item2 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .content {
+    margin-top: 350px;
+  }
+  .gioithieu1 {
+    grid-template-columns: 1fr;
+  }
+  .menu-mb {
+    display: block;
+    position: relative;
+    margin-left: 70px;
+  }
+  .menu-mb:hover ~ .menua ul.menu {
+    display: block;
+    transform: translateX(0);
+  }
+  ul.menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    padding-top: 50px;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-150%);
+    border-top: 1px solid #333;
+  }
+  ul.menu li {
+    float: none;
+    line-height: 50px;
+  }
+  .seach input {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    font-size: 18px;
+  }
+  .content_banner p {
+    font-size: 18px;
+  }
+  ul.concon1 {
+    width: 350px;
+    top: 65px;
+    right: 10px;
+  }
+  ul.concon {
+    width: 350px;
+  }
+  .resmb img {
+    width: 50px;
+    height: 50px;
+  }
+ 
+}
