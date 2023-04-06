@@ -13,9 +13,9 @@ register.addEventListener("click", () => {
 
 // reponsive trên mobil
 // reponsive trên mobil
-let chacha1 = document.querySelector(".chacha1");
+let chacha1 = document.querySelector(".account");
 let concon1 = document.querySelector(".concon1");
-let chacha = document.querySelector(".chacha");
+let chacha = document.querySelector(".payment");
 let concon = document.querySelector(".concon");
 let menuMb = document.querySelector(".menu-mb");
 let menu = document.querySelector(".menu");
@@ -34,7 +34,7 @@ function toggleConcon1(name) {
   }
 }
 
-chacha1.addEventListener("focus",() => toggleConcon1(concon1));
+chacha1.addEventListener("focus", () => toggleConcon1(concon1));
 chacha.addEventListener("focus", () => toggleConcon1(concon));
 menuMb.addEventListener("focus", () => toggleConcon1(menu));
 seach.addEventListener("focus", () => toggleConcon1(timkiem));
