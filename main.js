@@ -34,25 +34,10 @@ function toggleConcon1(name) {
   }
 }
 
-chacha1.addEventListener("touchstart", () => {
-  toggleConcon1(concon1);
-  let login = document.querySelector("#login");
-  let register = document.querySelector("#register");
-  let hideRes = document.querySelector(".register");
-  let hidelog = document.querySelector(".login");
-  login.addEventListener("click", () => {
-    hideRes.style.display = "none";
-    hidelog.style.display = "block";
-  });
-  register.addEventListener("click", () => {
-    hidelog.style.display = "none";
-    hideRes.style.display = "block";
-  });
-});
-
-chacha.addEventListener("touchstart", () => toggleConcon1(concon));
-menuMb.addEventListener("touchstart", () => toggleConcon1(menu));
-seach.addEventListener("touchstart", () => toggleConcon1(timkiem));
+chacha1.addEventListener("focus",() => toggleConcon1(concon1));
+chacha.addEventListener("focus", () => toggleConcon1(concon));
+menuMb.addEventListener("focus", () => toggleConcon1(menu));
+seach.addEventListener("focus", () => toggleConcon1(timkiem));
 
 // show pay item
 let pmp = document.querySelectorAll(".product2");
